@@ -54,12 +54,13 @@ export default function Repair({ setCurrentPage }: RepairProps) {
   return (
     <div className="w-full bg-[#FAF8F5]">
       {/* Hero Section */}
-      <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-green">
+      <section className="relative pt-36 pb-16 sm:pt-40 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-green">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=2070" 
-            alt="Garage Door Repair" 
+          <img
+            src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=70&w=1200"
+            alt="Garage Door Repair"
             className="w-full h-full object-cover opacity-20"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-green via-brand-green/80 to-transparent"></div>
         </div>
@@ -119,10 +120,12 @@ export default function Repair({ setCurrentPage }: RepairProps) {
             </div>
             <div className="lg:w-1/2 relative w-full">
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Garage Door Repair Technician" 
+                <img
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=70&w=900"
+                  alt="Garage Door Repair Technician"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-brown/50 to-transparent"></div>
@@ -148,7 +151,7 @@ export default function Repair({ setCurrentPage }: RepairProps) {
             {services.map((service) => (
               <div key={service.id} className="group bg-[#FAF8F5] rounded-[2rem] p-10 shadow-sm border border-brand-brown/5 hover:shadow-xl transition-all duration-300 flex flex-col h-full hover:-translate-y-1">
                 <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-brand-brown/5 group-hover:scale-110 transition-transform duration-300">
-                  {React.cloneElement(service.icon as React.ReactElement, { className: "w-8 h-8 text-brand-orange mb-0" })}
+                  {React.cloneElement(service.icon as React.ReactElement<{ className: string }>, { className: "w-8 h-8 text-brand-orange mb-0" })}
                 </div>
                 <h3 className="font-display text-2xl text-brand-green uppercase tracking-tight mb-4 group-hover:text-brand-orange transition-colors">{service.title}</h3>
                 <p className="font-body text-brand-brown/70 font-light mb-8 flex-grow leading-relaxed">{service.desc}</p>

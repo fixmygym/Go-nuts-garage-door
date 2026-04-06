@@ -25,10 +25,12 @@ export default function Footer({ setCurrentPage }: FooterProps) {
           
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-1">
-            <img 
-              src="/GoNuts_Logo_forTM.png" 
-              alt="Go Nuts Garage Door" 
-              className="h-32 w-auto mb-6 drop-shadow-xl"
+            <img
+              src="/GoNuts_Logo_forTM.png"
+              alt="Go Nuts Garage Door"
+              className="h-24 sm:h-32 w-auto mb-6 drop-shadow-xl"
+              loading="lazy"
+              decoding="async"
             />
             <p className="font-body text-brand-cream/80 mb-6">
               Go Nuts for the Best Garage Door Service in Granbury, TX! Fast, reliable, and local.
@@ -81,7 +83,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-brand-orange mr-3 flex-shrink-0" />
-                <a href="mailto:info@gonutsgaragedoor.com" className="hover:text-brand-orange transition-colors">info@gonutsgaragedoor.com</a>
+                <a href="mailto:info@gonutsgaragedoor.com" className="hover:text-brand-orange transition-colors break-all">info@gonutsgaragedoor.com</a>
               </li>
             </ul>
           </div>

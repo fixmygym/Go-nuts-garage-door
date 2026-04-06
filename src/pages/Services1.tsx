@@ -10,13 +10,14 @@ export default function Services1({ setCurrentPage }: Services1Props) {
   return (
     <div className="min-h-screen bg-[#FAF8F5]">
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center pt-48 pb-24 lg:pt-56 lg:pb-32 overflow-hidden bg-brand-green">
+      <section className="relative min-h-[50vh] flex items-center pt-40 pb-16 sm:pt-48 lg:pt-56 lg:pb-32 overflow-hidden bg-brand-green">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             src="/garage%20door%202.jpg"
-            alt="Garage Door Services" 
+            alt="Garage Door Services"
             className="w-full h-full object-cover opacity-40"
+            fetchPriority="high"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-green via-brand-green/80 to-transparent"></div>
@@ -83,8 +84,10 @@ export default function Services1({ setCurrentPage }: Services1Props) {
               <div className="relative rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(30,70,60,0.25)]">
                 <img
                   src="/garage%20door%203.jpg"
-                  alt="Service Intro" 
+                  alt="Service Intro"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

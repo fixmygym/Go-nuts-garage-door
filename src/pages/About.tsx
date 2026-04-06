@@ -30,12 +30,13 @@ export default function About({ setCurrentPage }: AboutProps) {
   return (
     <div className="w-full bg-[#FAF8F5]">
       {/* Hero Section */}
-      <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-green">
+      <section className="relative pt-36 pb-16 sm:pt-40 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-green">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-            alt="Luxury Home Exterior" 
+          <img
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=70"
+            alt="Luxury Home Exterior"
             className="w-full h-full object-cover opacity-20"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-green via-brand-green/80 to-transparent"></div>
         </div>
@@ -70,10 +71,12 @@ export default function About({ setCurrentPage }: AboutProps) {
             </div>
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                  alt="Our Team at Work" 
+                <img
+                  src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=70"
+                  alt="Our Team at Work"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-brown/50 to-transparent"></div>
               </div>
@@ -103,10 +106,12 @@ export default function About({ setCurrentPage }: AboutProps) {
                 <div className="absolute inset-0 bg-brand-green rounded-[2rem] transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1 -z-10 opacity-0 group-hover:opacity-10"></div>
                 <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-brand-brown/5 transition-all duration-500 group-hover:-translate-y-2">
                   <div className="aspect-[4/5] overflow-hidden relative">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
+                    <img
+                      src={member.image}
+                      alt={member.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-brown/80 via-transparent to-transparent opacity-60"></div>
                   </div>
@@ -176,10 +181,12 @@ export default function About({ setCurrentPage }: AboutProps) {
             <div className="md:w-1/3 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-orange/20 rounded-full blur-3xl"></div>
-                <img 
-                  src="https://storage.googleapis.com/aistudio-user-uploads-us-central1/01jpd4j941ey7v84v6xnt78c77/Go_Nuts_Garage_Door_Mascot.png" 
-                  alt="Nutty the Mascot" 
-                  className="w-72 h-auto relative z-10 drop-shadow-2xl transform transition-transform hover:scale-105 duration-500"
+                <img
+                  src="https://storage.googleapis.com/aistudio-user-uploads-us-central1/01jpd4j941ey7v84v6xnt78c77/Go_Nuts_Garage_Door_Mascot.png"
+                  alt="Nutty the Mascot"
+                  className="w-48 sm:w-64 md:w-72 h-auto relative z-10 drop-shadow-2xl transform transition-transform hover:scale-105 duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

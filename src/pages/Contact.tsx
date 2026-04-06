@@ -27,12 +27,13 @@ export default function Contact({ setCurrentPage }: ContactProps) {
   return (
     <div className="w-full bg-[#FAF8F5]">
       {/* Hero Section */}
-      <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-green">
+      <section className="relative pt-36 pb-16 sm:pt-40 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-green">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1595844730298-b960fa25fa48?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-            alt="Luxury Garage" 
+          <img
+            src="https://images.unsplash.com/photo-1595844730298-b960fa25fa48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=70"
+            alt="Luxury Garage"
             className="w-full h-full object-cover opacity-20"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-green via-brand-green/80 to-transparent"></div>
         </div>
@@ -121,7 +122,7 @@ export default function Contact({ setCurrentPage }: ContactProps) {
             {/* Contact Form */}
             <div className="lg:w-2/3 relative">
               <div className="absolute inset-0 bg-brand-green rounded-[3rem] transform translate-x-2 translate-y-2 opacity-10 -z-10"></div>
-              <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-brand-brown/5 relative z-10">
+              <div className="bg-white p-6 sm:p-10 md:p-16 rounded-[2rem] sm:rounded-[3rem] shadow-2xl border border-brand-brown/5 relative z-10">
                 <h2 className="font-display text-4xl md:text-5xl text-brand-green uppercase tracking-tight mb-10">Send a <span className="text-brand-orange">Message</span></h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-8">

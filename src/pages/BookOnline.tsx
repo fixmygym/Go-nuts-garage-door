@@ -48,7 +48,7 @@ export default function BookOnline({ setCurrentPage }: BookOnlineProps) {
   ];
 
   return (
-    <div className="w-full bg-[#FAF8F5] min-h-screen pt-40 pb-24 relative overflow-hidden">
+    <div className="w-full bg-[#FAF8F5] min-h-screen pt-36 pb-24 sm:pt-40 relative overflow-hidden">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1B3B36 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
       
@@ -95,7 +95,7 @@ export default function BookOnline({ setCurrentPage }: BookOnlineProps) {
         {/* Form Container */}
         <div className="relative">
           <div className="absolute inset-0 bg-brand-green rounded-[3rem] transform translate-x-2 translate-y-2 opacity-5 -z-10"></div>
-          <div className="bg-white rounded-[3rem] shadow-2xl border border-brand-brown/5 p-10 md:p-16 relative z-10 overflow-hidden">
+          <div className="bg-white rounded-[2rem] sm:rounded-[3rem] shadow-2xl border border-brand-brown/5 p-6 sm:p-10 md:p-16 relative z-10 overflow-hidden">
             
             {/* Step 1: Select Service */}
             {step === 1 && (

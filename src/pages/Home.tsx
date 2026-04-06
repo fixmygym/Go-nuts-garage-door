@@ -32,13 +32,14 @@ export default function Home({ setCurrentPage, isHome2 = false }: HomeProps) {
     <div className="w-full pb-20 md:pb-0 bg-[#FAF8F5]">
       
       {/* 1. HERO SECTION WITH LEAD FORM */}
-      <section className="relative flex items-center pt-56 pb-12 lg:pt-60 lg:pb-16 overflow-hidden bg-brand-green">
+      <section className="relative flex items-center pt-44 pb-10 sm:pt-52 lg:pt-60 lg:pb-16 overflow-hidden bg-brand-green">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             src="/garage%20door%201.jpg"
-            alt="Garage Door Installation" 
+            alt="Garage Door Installation"
             className="w-full h-full object-cover opacity-40"
+            fetchPriority="high"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-green via-brand-green/90 to-transparent"></div>
@@ -100,11 +101,11 @@ export default function Home({ setCurrentPage, isHome2 = false }: HomeProps) {
 
             {/* Hero Lead Form - Glassmorphism */}
             <div className="lg:col-span-5 relative">
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2rem] shadow-2xl p-10 relative overflow-hidden">
-                <motion.div 
+              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2rem] shadow-2xl p-6 sm:p-10 relative overflow-hidden">
+                <motion.div
                   initial={{ y: 0 }}
                   animate={{ y: '-100%' }}
-                  transition={{ duration: 4, delay: 0.5, ease: [0.25, 1, 0.5, 1] }}
+                  transition={{ duration: 2.5, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
                   className="absolute inset-0 z-50 bg-brand-green flex flex-col border-b-[12px] border-brand-orange shadow-2xl"
                 >
                   {/* Luxury Modern Garage Door Panels */}
@@ -194,7 +195,7 @@ export default function Home({ setCurrentPage, isHome2 = false }: HomeProps) {
               >
                 <div className="p-5 pt-6 text-center">
                   <div className="relative mx-auto flex aspect-square size-24 items-center justify-center rounded-full border border-brand-brown/10 before:absolute before:-inset-2 before:rounded-full before:border before:border-brand-brown/5">
-                    <div className="absolute inset-0 rounded-full border-4 border-dashed border-brand-orange/10 animate-[spin_20s_linear_infinite]" />
+                    <div className="absolute inset-0 rounded-full border-4 border-dashed border-brand-orange/10 motion-safe:animate-[spin_20s_linear_infinite]" />
                     <Wrench className="size-9 text-brand-orange transition-transform duration-300 group-hover:rotate-12" strokeWidth={1.5} />
                   </div>
                   <div className="mt-5 space-y-1.5">
@@ -330,7 +331,9 @@ export default function Home({ setCurrentPage, isHome2 = false }: HomeProps) {
               <img
                 src="/garage%20door%203.jpg"
                 alt="Granbury Garage Door Experts"
-                className="relative z-10 w-full h-[500px] object-cover rounded-[1.5rem] shadow-xl"
+                className="relative z-10 w-full h-64 sm:h-80 lg:h-[500px] object-cover rounded-[1.5rem] shadow-xl"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute bottom-6 left-6 z-20 bg-white rounded-2xl px-5 py-4 shadow-xl">
@@ -427,10 +430,12 @@ export default function Home({ setCurrentPage, isHome2 = false }: HomeProps) {
             </div>
             <div className="order-1 lg:order-2 relative">
               <div className="absolute inset-0 bg-brand-green/40 rounded-[2rem] transform translate-x-4 translate-y-4 blur-sm"></div>
-              <img 
+              <img
                 src="/garage%20door%204.jpg"
-                alt="Go Nuts Garage Doors" 
+                alt="Go Nuts Garage Doors"
                 className="relative z-10 w-full h-auto rounded-[2rem] object-cover shadow-xl"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -658,6 +663,8 @@ export default function Home({ setCurrentPage, isHome2 = false }: HomeProps) {
                   src="/trey.png"
                   alt="Trey Harless"
                   className="w-full h-72 object-contain group-hover:scale-105 transition-transform duration-700 drop-shadow-[0_20px_40px_rgba(30,70,60,0.25)]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="font-display text-2xl text-brand-brown uppercase tracking-wide mb-1">Trey Harless</h3>
@@ -672,6 +679,8 @@ export default function Home({ setCurrentPage, isHome2 = false }: HomeProps) {
                   src="/mckena.png"
                   alt="Mckena Harless"
                   className="w-full h-72 object-contain group-hover:scale-105 transition-transform duration-700 drop-shadow-[0_20px_40px_rgba(30,70,60,0.25)]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="font-display text-2xl text-brand-brown uppercase tracking-wide mb-1">Mckena Harless</h3>
@@ -728,10 +737,12 @@ export default function Home({ setCurrentPage, isHome2 = false }: HomeProps) {
               </div>
               
               <div className="relative min-h-[300px] lg:min-h-full hidden md:block">
-                <img 
+                <img
                   src="/garage%20door%205.jpg"
-                  alt="Garage Door Technician" 
+                  alt="Garage Door Technician"
                   className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-white via-white/20 to-transparent lg:w-32"></div>
               </div>
