@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E '\\\\.\\(png|jpg|jpeg|gif|svg|webp\\)$')",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:www.vecteezy.com)",
+      "Read(//private/etc/**)"
+    ]
+  }
+}

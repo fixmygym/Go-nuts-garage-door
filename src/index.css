@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-brown: #754839;
+  --color-brand-orange: #EB692E;
+  --color-brand-green: #001E1E;
+  --color-brand-cream: #FFF4C8;
+  --color-brand-blue: #B3DBF4;
+  --font-display: "Anton", sans-serif;
+  --font-body: "Nunito", sans-serif;
+}
+
+@layer utilities {
+  .animate-garage-door {
+    animation: slideUp 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
